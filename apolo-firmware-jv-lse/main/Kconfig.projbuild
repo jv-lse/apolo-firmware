@@ -1,0 +1,19 @@
+#
+# Enable ID Recording
+#
+
+menu "Configuracao de identificador de dispositivo"
+    
+    config ENABLE_ID_RECORDING
+        bool "Enable ID Recording"
+        help
+            Enable recording of ID information.
+
+    config ID_STRING
+        string "- MIAS ID"
+        depends on ENABLE_ID_RECORDING
+        default "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        help
+            Adcione os UUID para o dispositivo MIAS.
+
+endmenu
